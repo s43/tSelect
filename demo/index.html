@@ -1,0 +1,421 @@
+<!DOCTYPE html>  
+<!--[if IE 7 ]> <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> 
+<html> 
+<!--<![endif]-->
+	<head>  
+		<!-- Meta -->
+	    <meta charset="utf-8" />
+	    <meta name="keywords" content="input file jquery, custom input file, personalise input file, custom upload" />
+	    <meta name="description" content="tSelect - A simple jquery plugin to customise your file inputs" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	    <!-- Titre -->
+		<title>tSelect - A simple jquery plugin to customise your selects</title> 
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="../src/css/jquery.tselect.css">
+		<style type="text/css">
+			body{
+				background: #ffe1e1;
+				color: #3e3e3e;
+			}
+			#wrapper{
+			    background: #fffafa;				
+			    width: 600px;
+			    padding: 30px;
+			    margin: 30px auto 0;
+			}
+		</style>
+	</head> 
+	 
+	<body>
+		<!--#include virtual="templates/header.html" --> 
+		<section id="wrapper" class="container">
+			<h1>tSelect 1.0</h1>
+			<h2>A lite jquery plugin to customise your selects</h2>
+			<hr />
+			<div id="select-1">
+				<h3>Example : Custom select with filter enabled ( Search )</h3>
+				<select id="countries" name="countries" placeholder="Select">
+					<option value="">Select</option>
+					<option data-legal-age="18" value="AF">Afghanistan</option>
+					<option data-legal-age="18" value="ZA">Afrique du Sud</option>
+					<option data-legal-age="18" value="AL">Albanie</option>
+					<option data-legal-age="18" value="DZ">Alg&eacute;rie</option>
+					<option data-legal-age="18" value="DE">Allemagne</option>
+					<option data-legal-age="18" value="AD">Andorre</option>
+					<option data-legal-age="18" value="AO">Angola</option>
+					<option data-legal-age="18" value="AI">Anguilla</option>
+					<option data-legal-age="18" value="AQ">Antarctique</option>
+					<option data-legal-age="18" value="AG">Antigua-et-Barbuda</option>
+					<option data-legal-age="18" value="SA">Arabie saoudite</option>
+					<option data-legal-age="18" value="AR">Argentine</option>
+					<option data-legal-age="18" value="AM">Arm&eacute;nie</option>
+					<option data-legal-age="18" value="AW">Aruba</option>
+					<option data-legal-age="18" value="AU">Australie</option>
+					<option data-legal-age="18" value="AT">Autriche</option>
+					<option data-legal-age="18" value="AZ">Azerba&iuml;djan</option>
+					<option data-legal-age="18" value="BS">Bahamas</option>
+					<option data-legal-age="18" value="BH">Bahre&iuml;n</option>
+					<option data-legal-age="18" value="BD">Bangladesh</option>
+					<option data-legal-age="18" value="BB">Barbade</option>
+					<option data-legal-age="18" value="BE">Belgique</option>
+					<option data-legal-age="18" value="BZ">Belize</option>
+					<option data-legal-age="18" value="BJ">B&eacute;nin</option>
+					<option data-legal-age="18" value="BM">Bermudes</option>
+					<option data-legal-age="18" value="BT">Bhoutan</option>
+					<option data-legal-age="18" value="BY">Bi&eacute;lorussie</option>
+					<option data-legal-age="18" value="BO">Bolivie</option>
+					<option data-legal-age="18" value="BA">Bosnie-Herz&eacute;govine</option>
+					<option data-legal-age="18" value="BW">Botswana</option>
+					<option data-legal-age="18" value="BR">Br&eacute;sil</option>
+					<option data-legal-age="18" value="BN">Brun&eacute;i Darussalam</option>
+					<option data-legal-age="18" value="BG">Bulgarie</option>
+					<option data-legal-age="18" value="BF">Burkina Faso</option>
+					<option data-legal-age="18" value="BI">Burundi</option>
+					<option data-legal-age="18" value="KH">Cambodge</option>
+					<option data-legal-age="18" value="CM">Cameroun</option>
+					<option data-legal-age="18" value="CA">Canada</option>
+					<option data-legal-age="18" value="CV">Cap-Vert</option>
+					<option data-legal-age="18" value="EA">Ceuta et Melilla</option>
+					<option data-legal-age="18" value="CL">Chili</option>
+					<option data-legal-age="18" value="CN">Chine</option>
+					<option data-legal-age="18" value="CY">Chypre</option>
+					<option data-legal-age="18" value="CO">Colombie</option>
+					<option data-legal-age="18" value="KM">Comores</option>
+					<option data-legal-age="18" value="CG">Congo-Brazzaville</option>
+					<option data-legal-age="18" value="CD">Congo-Kinshasa</option>
+					<option data-legal-age="18" value="KP">Cor&eacute;e du Nord</option>
+					<option data-legal-age="18" value="KR">Cor&eacute;e du Sud</option>
+					<option data-legal-age="18" value="CR">Costa Rica</option>
+					<option data-legal-age="18" value="CI">C&ocirc;te d&rsquo;Ivoire</option>
+					<option data-legal-age="18" value="HR">Croatie</option>
+					<option data-legal-age="18" value="CU">Cuba</option>
+					<option data-legal-age="18" value="CW">Cura&ccedil;ao</option>
+					<option data-legal-age="18" value="DK">Danemark</option>
+					<option data-legal-age="18" value="DG">Diego Garcia</option>
+					<option data-legal-age="18" value="DJ">Djibouti</option>
+					<option data-legal-age="18" value="DM">Dominique</option>
+					<option data-legal-age="18" value="EG">&Eacute;gypte</option>
+					<option data-legal-age="18" value="SV">El Salvador</option>
+					<option data-legal-age="18" value="AE">&Eacute;mirats arabes unis</option>
+					<option data-legal-age="18" value="EC">&Eacute;quateur</option>
+					<option data-legal-age="18" value="ER">&Eacute;rythr&eacute;e</option>
+					<option data-legal-age="18" value="ES">Espagne</option>
+					<option data-legal-age="18" value="EE">Estonie</option>
+					<option data-legal-age="18" value="VA">&Eacute;tat de la Cit&eacute; du Vatican</option>
+					<option data-legal-age="18" value="FM">&Eacute;tats f&eacute;d&eacute;r&eacute;s de Micron&eacute;sie</option>
+					<option data-legal-age="16" value="US">&Eacute;tats-Unis</option>
+					<option data-legal-age="18" value="ET">&Eacute;thiopie</option>
+					<option data-legal-age="18" value="FJ">Fidji</option>
+					<option data-legal-age="18" value="FI">Finlande</option>
+					<option data-legal-age="18" value="FR">France</option>
+					<option data-legal-age="18" value="GA">Gabon</option>
+					<option data-legal-age="18" value="GM">Gambie</option>
+					<option data-legal-age="18" value="GE">G&eacute;orgie</option>
+					<option data-legal-age="18" value="GH">Ghana</option>
+					<option data-legal-age="18" value="GI">Gibraltar</option>
+					<option data-legal-age="18" value="GR">Gr&egrave;ce</option>
+					<option data-legal-age="18" value="GD">Grenade</option>
+					<option data-legal-age="18" value="GL">Groenland</option>
+					<option data-legal-age="18" value="GP">Guadeloupe</option>
+					<option data-legal-age="18" value="GU">Guam</option>
+					<option data-legal-age="18" value="GT">Guatemala</option>
+					<option data-legal-age="18" value="GG">Guernesey</option>
+					<option data-legal-age="18" value="GN">Guin&eacute;e</option>
+					<option data-legal-age="18" value="GQ">Guin&eacute;e &eacute;quatoriale</option>
+					<option data-legal-age="18" value="GW">Guin&eacute;e-Bissau</option>
+					<option data-legal-age="18" value="GY">Guyana</option>
+					<option data-legal-age="18" value="GF">Guyane fran&ccedil;aise</option>
+					<option data-legal-age="18" value="HT">Ha&iuml;ti</option>
+					<option data-legal-age="18" value="HN">Honduras</option>
+					<option data-legal-age="18" value="HU">Hongrie</option>
+					<option data-legal-age="18" value="CX">&Icirc;le Christmas</option>
+					<option data-legal-age="18" value="AC">&Icirc;le de l&rsquo;Ascension</option>
+					<option data-legal-age="18" value="IM">&Icirc;le de Man</option>
+					<option data-legal-age="18" value="NF">&Icirc;le Norfolk</option>
+					<option data-legal-age="18" value="AX">&Icirc;les &Aring;land</option>
+					<option data-legal-age="18" value="KY">&Icirc;les Ca&iuml;mans</option>
+					<option data-legal-age="18" value="IC">&Icirc;les Canaries</option>
+					<option data-legal-age="18" value="CC">&Icirc;les Cocos</option>
+					<option data-legal-age="18" value="CK">&Icirc;les Cook</option>
+					<option data-legal-age="18" value="FO">&Icirc;les F&eacute;ro&eacute;</option>
+					<option data-legal-age="18" value="GS">&Icirc;les G&eacute;orgie du Sud et Sandwich du Sud</option>
+					<option data-legal-age="18" value="FK">&Icirc;les Malouines</option>
+					<option data-legal-age="18" value="MP">&Icirc;les Mariannes du Nord</option>
+					<option data-legal-age="18" value="MH">&Icirc;les Marshall</option>
+					<option data-legal-age="18" value="UM">&Icirc;les mineures &eacute;loign&eacute;es des &Eacute;tats-Unis</option>
+					<option data-legal-age="18" value="SB">&Icirc;les Salomon</option>
+					<option data-legal-age="18" value="TC">&Icirc;les Turques-et-Ca&iuml;ques</option>
+					<option data-legal-age="18" value="VG">&Icirc;les Vierges britanniques</option>
+					<option data-legal-age="18" value="VI">&Icirc;les Vierges des &Eacute;tats-Unis</option>
+					<option data-legal-age="18" value="IN">Inde</option>
+					<option data-legal-age="18" value="ID">Indon&eacute;sie</option>
+					<option data-legal-age="18" value="IQ">Irak</option>
+					<option data-legal-age="18" value="IR">Iran</option>
+					<option data-legal-age="18" value="IE">Irlande</option>
+					<option data-legal-age="18" value="IS">Islande</option>
+					<option data-legal-age="18" value="IL">Isra&euml;l</option>
+					<option data-legal-age="18" value="IT">Italie</option>
+					<option data-legal-age="18" value="JM">Jama&iuml;que</option>
+					<option data-legal-age="18" value="JP">Japon</option>
+					<option data-legal-age="18" value="JE">Jersey</option>
+					<option data-legal-age="18" value="JO">Jordanie</option>
+					<option data-legal-age="18" value="KZ">Kazakhstan</option>
+					<option data-legal-age="18" value="KE">Kenya</option>
+					<option data-legal-age="18" value="KG">Kirghizistan</option>
+					<option data-legal-age="18" value="KI">Kiribati</option>
+					<option data-legal-age="18" value="XK">Kosovo</option>
+					<option data-legal-age="18" value="KW">Kowe&iuml;t</option>
+					<option data-legal-age="18" value="RE">La R&eacute;union</option>
+					<option data-legal-age="18" value="LA">Laos</option>
+					<option data-legal-age="18" value="LS">Lesotho</option>
+					<option data-legal-age="18" value="LV">Lettonie</option>
+					<option data-legal-age="18" value="LB">Liban</option>
+					<option data-legal-age="18" value="LR">Lib&eacute;ria</option>
+					<option data-legal-age="18" value="LY">Libye</option>
+					<option data-legal-age="18" value="LI">Liechtenstein</option>
+					<option data-legal-age="18" value="LT">Lituanie</option>
+					<option data-legal-age="18" value="LU">Luxembourg</option>
+					<option data-legal-age="18" value="MK">Mac&eacute;doine</option>
+					<option data-legal-age="18" value="MG">Madagascar</option>
+					<option data-legal-age="18" value="MY">Malaisie</option>
+					<option data-legal-age="18" value="MW">Malawi</option>
+					<option data-legal-age="18" value="MV">Maldives</option>
+					<option data-legal-age="18" value="ML">Mali</option>
+					<option data-legal-age="18" value="MT">Malte</option>
+					<option data-legal-age="180" value="MA">Maroc</option>
+					<option data-legal-age="18" value="MQ">Martinique</option>
+					<option data-legal-age="18" value="MU">Maurice</option>
+					<option data-legal-age="18" value="MR">Mauritanie</option>
+					<option data-legal-age="18" value="YT">Mayotte</option>
+					<option data-legal-age="18" value="MX">Mexique</option>
+					<option data-legal-age="18" value="MD">Moldavie</option>
+					<option data-legal-age="18" value="MC">Monaco</option>
+					<option data-legal-age="18" value="MN">Mongolie</option>
+					<option data-legal-age="18" value="ME">Mont&eacute;n&eacute;gro</option>
+					<option data-legal-age="18" value="MS">Montserrat</option>
+					<option data-legal-age="18" value="MZ">Mozambique</option>
+					<option data-legal-age="18" value="MM">Myanmar</option>
+					<option data-legal-age="18" value="NA">Namibie</option>
+					<option data-legal-age="18" value="NR">Nauru</option>
+					<option data-legal-age="18" value="NP">N&eacute;pal</option>
+					<option data-legal-age="18" value="NI">Nicaragua</option>
+					<option data-legal-age="18" value="NE">Niger</option>
+					<option data-legal-age="18" value="NG">Nig&eacute;ria</option>
+					<option data-legal-age="18" value="NU">Niue</option>
+					<option data-legal-age="20" value="NO">Norv&egrave;ge</option>
+					<option data-legal-age="18" value="NC">Nouvelle-Cal&eacute;donie</option>
+					<option data-legal-age="18" value="NZ">Nouvelle-Z&eacute;lande</option>
+					<option data-legal-age="18" value="OM">Oman</option>
+					<option data-legal-age="18" value="UG">Ouganda</option>
+					<option data-legal-age="18" value="UZ">Ouzb&eacute;kistan</option>
+					<option data-legal-age="18" value="PK">Pakistan</option>
+					<option data-legal-age="18" value="PW">Palaos</option>
+					<option data-legal-age="18" value="PA">Panama</option>
+					<option data-legal-age="18" value="PG">Papouasie-Nouvelle-Guin&eacute;e</option>
+					<option data-legal-age="18" value="PY">Paraguay</option>
+					<option data-legal-age="18" value="NL">Pays-Bas</option>
+					<option data-legal-age="18" value="BQ">Pays-Bas carib&eacute;ens</option>
+					<option data-legal-age="18" value="PE">P&eacute;rou</option>
+					<option data-legal-age="18" value="PH">Philippines</option>
+					<option data-legal-age="18" value="PN">Pitcairn</option>
+					<option data-legal-age="18" value="PL">Pologne</option>
+					<option data-legal-age="18" value="PF">Polyn&eacute;sie fran&ccedil;aise</option>
+					<option data-legal-age="18" value="PR">Porto Rico</option>
+					<option data-legal-age="18" value="PT">Portugal</option>
+					<option data-legal-age="18" value="QA">Qatar</option>
+					<option data-legal-age="18" value="HK">R.A.S. chinoise de Hong Kong</option>
+					<option data-legal-age="18" value="MO">R.A.S. chinoise de Macao</option>
+					<option data-legal-age="18" value="CF">R&eacute;publique centrafricaine</option>
+					<option data-legal-age="18" value="DO">R&eacute;publique dominicaine</option>
+					<option data-legal-age="18" value="CZ">R&eacute;publique tch&egrave;que</option>
+					<option data-legal-age="18" value="RO">Roumanie</option>
+					<option data-legal-age="18" value="GB">Royaume-Uni</option>
+					<option data-legal-age="18" value="RU">Russie</option>
+					<option data-legal-age="18" value="RW">Rwanda</option>
+					<option data-legal-age="18" value="EH">Sahara occidental</option>
+					<option data-legal-age="18" value="BL">Saint-Barth&eacute;lemy</option>
+					<option data-legal-age="18" value="KN">Saint-Christophe-et-Ni&eacute;v&egrave;s</option>
+					<option data-legal-age="18" value="SM">Saint-Marin</option>
+					<option data-legal-age="18" value="MF">Saint-Martin (partie fran&ccedil;aise)</option>
+					<option data-legal-age="18" value="SX">Saint-Martin (partie n&eacute;erlandaise)</option>
+					<option data-legal-age="18" value="PM">Saint-Pierre-et-Miquelon</option>
+					<option data-legal-age="18" value="VC">Saint-Vincent-et-les-Grenadines</option>
+					<option data-legal-age="18" value="SH">Sainte-H&eacute;l&egrave;ne</option>
+					<option data-legal-age="18" value="LC">Sainte-Lucie</option>
+					<option data-legal-age="18" value="WS">Samoa</option>
+					<option data-legal-age="18" value="AS">Samoa am&eacute;ricaines</option>
+					<option data-legal-age="18" value="ST">Sao Tom&eacute;-et-Principe</option>
+					<option data-legal-age="18" value="SN">S&eacute;n&eacute;gal</option>
+					<option data-legal-age="18" value="RS">Serbie</option>
+					<option data-legal-age="18" value="SC">Seychelles</option>
+					<option data-legal-age="18" value="SL">Sierra Leone</option>
+					<option data-legal-age="18" value="SG">Singapour</option>
+					<option data-legal-age="18" value="SK">Slovaquie</option>
+					<option data-legal-age="18" value="SI">Slov&eacute;nie</option>
+					<option data-legal-age="18" value="SO">Somalie</option>
+					<option data-legal-age="18" value="SD">Soudan</option>
+					<option data-legal-age="18" value="SS">Soudan du Sud</option>
+					<option data-legal-age="18" value="LK">Sri Lanka</option>
+					<option data-legal-age="18" value="SE">Su&egrave;de</option>
+					<option data-legal-age="18" value="CH">Suisse</option>
+					<option data-legal-age="18" value="SR">Suriname</option>
+					<option data-legal-age="18" value="SJ">Svalbard et Jan Mayen</option>
+					<option data-legal-age="18" value="SZ">Swaziland</option>
+					<option data-legal-age="18" value="SY">Syrie</option>
+					<option data-legal-age="18" value="TJ">Tadjikistan</option>
+					<option data-legal-age="18" value="TW">Ta&iuml;wan</option>
+					<option data-legal-age="18" value="TZ">Tanzanie</option>
+					<option data-legal-age="18" value="TD">Tchad</option>
+					<option data-legal-age="18" value="TF">Terres australes fran&ccedil;aises</option>
+					<option data-legal-age="18" value="IO">Territoire britannique de l&rsquo;oc&eacute;an Indien</option>
+					<option data-legal-age="18" value="PS">Territoires palestiniens</option>
+					<option data-legal-age="18" value="TH">Tha&iuml;lande</option>
+					<option data-legal-age="18" value="TL">Timor oriental</option>
+					<option data-legal-age="18" value="TG">Togo</option>
+					<option data-legal-age="18" value="TK">Tokelau</option>
+					<option data-legal-age="18" value="TO">Tonga</option>
+					<option data-legal-age="18" value="TT">Trinit&eacute;-et-Tobago</option>
+					<option data-legal-age="18" value="TA">Tristan da Cunha</option>
+					<option data-legal-age="18" value="TN">Tunisie</option>
+					<option data-legal-age="18" value="TM">Turkm&eacute;nistan</option>
+					<option data-legal-age="18" value="TR">Turquie</option>
+					<option data-legal-age="18" value="TV">Tuvalu</option>
+					<option data-legal-age="18" value="UA">Ukraine</option>
+					<option data-legal-age="18" value="UY">Uruguay</option>
+					<option data-legal-age="18" value="VU">Vanuatu</option>
+					<option data-legal-age="18" value="VE">Venezuela</option>
+					<option data-legal-age="18" value="VN">Vietnam</option>
+					<option data-legal-age="18" value="WF">Wallis-et-Futuna</option>
+					<option data-legal-age="18" value="YE">Y&eacute;men</option>
+					<option data-legal-age="18" value="ZM">Zambie</option>
+					<option data-legal-age="18" value="ZW">Zimbabwe</option>
+				</select>				
+			</div>
+			<!-- #select-1 -->
+			<div id="select-2" style="display: none;">
+				<h3>Example : Simple custom select</h3>
+				<select name="simple" id="simple">
+					<option value="1">Option 1</option>
+					<option value="2">Option 2</option>
+					<option value="3">Option 3</option>
+					<option value="4">Option 4</option>
+					<option value="5">Option 5</option>
+					<option value="6">Option 6</option>
+					<option value="7">Option 7</option>
+					<option value="8">Option 8</option>
+					<option value="9">Option 9</option>
+					<option value="10">Option 10</option>
+					<option value="11">Option 11</option>
+					<option value="12">Option 12</option>
+					<option value="13">Option 13</option>
+					<option value="14">Option 14</option>
+					<option value="15">Option 15</option>
+					<option value="16">Option 16</option>
+					<option value="17">Option 17</option>
+					<option value="18">Option 18</option>
+					<option value="19">Option 19</option>
+					<option value="20">Option 20</option>
+				</select>
+			</div>
+			<!-- #select-2 -->
+			<div id="select-3" style="display: none;">
+				<h3>Custom Select With Option groups</h3>
+				<select class="js-source-states">
+				  <optgroup label="Alaskan/Hawaiian Time Zone">
+				    <option value="AK">Alaska</option>
+				    <option value="HI">Hawaii</option>
+				  </optgroup>
+				  <optgroup label="Pacific Time Zone">
+				    <option value="CA">California</option>
+				    <option value="NV">Nevada</option>
+				    <option value="OR">Oregon</option>
+				    <option value="WA">Washington</option>
+				  </optgroup>
+				  <optgroup label="Mountain Time Zone">
+				    <option value="AZ">Arizona</option>
+				    <option value="CO">Colorado</option>
+				    <option value="ID">Idaho</option>
+				    <option value="MT">Montana</option>
+				    <option value="NE">Nebraska</option>
+				    <option value="NM">New Mexico</option>
+				    <option value="ND">North Dakota</option>
+				    <option value="UT">Utah</option>
+				    <option value="WY">Wyoming</option>
+				  </optgroup>
+				  <optgroup label="Central Time Zone">
+				    <option value="AL">Alabama</option>
+				    <option value="AR">Arkansas</option>
+				    <option value="IL">Illinois</option>
+				    <option value="IA">Iowa</option>
+				    <option value="KS">Kansas</option>
+				    <option value="KY">Kentucky</option>
+				    <option value="LA">Louisiana</option>
+				    <option value="MN">Minnesota</option>
+				    <option value="MS">Mississippi</option>
+				    <option value="MO">Missouri</option>
+				    <option value="OK">Oklahoma</option>
+				    <option value="SD">South Dakota</option>
+				    <option value="TX">Texas</option>
+				    <option value="TN">Tennessee</option>
+				    <option value="WI">Wisconsin</option>
+				  </optgroup>
+				  <optgroup label="Eastern Time Zone">
+				    <option value="CT">Connecticut</option>
+				    <option value="DE">Delaware</option>
+				    <option value="FL">Florida</option>
+				    <option value="GA">Georgia</option>
+				    <option value="IN">Indiana</option>
+				    <option value="ME">Maine</option>
+				    <option value="MD">Maryland</option>
+				    <option value="MA">Massachusetts</option>
+				    <option value="MI">Michigan</option>
+				    <option value="NH">New Hampshire</option>
+				    <option value="NJ">New Jersey</option>
+				    <option value="NY">New York</option>
+				    <option value="NC">North Carolina</option>
+				    <option value="OH">Ohio</option>
+				    <option value="PA">Pennsylvania</option>
+				    <option value="RI">Rhode Island</option>
+				    <option value="SC">South Carolina</option>
+				    <option value="VT">Vermont</option>
+				    <option value="VA">Virginia</option>
+				    <option value="WV">West Virginia</option>
+				  </optgroup>
+				</select>							
+			</div>
+			<!-- #select-3 -->
+		</section>
+		<!-- ./wrapper -->
+		<!--#include virtual="templates/footer.html" --> 
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script type="text/javascript" src="../src/js/jquery.tselect.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('#select-1 select').tSelect({
+					placeholder : 'Select your country',
+					onOptionSelect : function(){
+						$('#select-2').show();
+					}
+				});
+
+				$('#select-2 select').tSelect({
+					placeholder : 'Pick your option',
+					filter : true,
+					filterPlaceholder: 'Search …',
+					onOptionSelect : function(){
+						$('#select-3').show();
+					}
+				});
+
+				$('#select-3 select').tSelect({
+					placeholder : 'Select your zone'
+				})
+			})
+		</script>
+		<!-- ./scripts -->
+	</body>  
+</html>

@@ -1,0 +1,112 @@
+.ts-wrap{
+	position: relative;
+	display: inline-block;
+}
+.ts-wrap *{
+	margin: 0;
+	padding: 0;
+}
+.ts-trigger{
+	background: #ffffff;
+	padding: 10px 42px 10px 8px;
+	border: 1px solid #f3f1f1;
+	min-width: 180px;
+	display: block;
+	color: #4e4e4e;
+	font-size: 15px;
+	position: relative;
+}
+.ts-trigger:after{
+	content:"";
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid #4e4e4e;
+	position: absolute;
+	right: 16px; top: 50%;
+	margin-top: -2.5px;
+}
+
+.ts-trigger:hover, .ts-trigger:focus{
+	text-decoration: none;
+	color: #cc6600;
+}
+.ts-trigger:hover:after, .ts-trigger:focus:after{
+	border-bottom-color: #cc6600;
+}
+.ts-wrap.ts-active .ts-trigger{
+	background: #fffdfd;
+}
+.ts-wrap.ts-active .ts-trigger:after {
+	border-top: 5px solid #cc6600;
+	border-bottom-color: transparent;
+}
+.ts-wrap.ts-active .ts-options-wrap{
+	box-shadow: 1px 1px 2px rgba(153, 153, 153, 0.39);
+	-webkit-box-shadow: 1px 1px 2px rgba(153, 153, 153, 0.39);
+	-moz-box-shadow: 1px 1px 2px rgba(153, 153, 153, 0.39);
+	-ms-box-shadow: 1px 1px 2px rgba(153, 153, 153, 0.39);
+	-o-box-shadow: 1px 1px 2px rgba(153, 153, 153, 0.39);
+}
+.ts-options-wrap{
+	background: #f9f9f9;
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0; right: 0;
+	width: 100%;
+	max-height: 280px;
+	overflow: scroll;
+	z-index: 4;
+}
+.ts-options-wrap a{
+	padding: 4px 8px;
+	font-size: 13px;
+	display: block;
+	color: #4e4e4e;
+}
+.ts-options-wrap a:hover,.ts-options-wrap a:focus{
+	background-color: #e6e6e6;
+	text-decoration: none;
+}
+.ts-options-wrap a + a{
+	border-top: 1px solid #e6e6e6;
+}
+.ts-options-wrap a.active{
+	color: #cc6600;
+}
+.ts-options-wrap a.ts-unmatched{
+	display: none;
+}
+.ts-options-wrap .ts-error{
+	font-size: 11px;
+	color: #999;
+	letter-spacing: 1px;
+	display: none;
+	padding: 10px;
+}
+.ts-options-wrap.ts-no-matches .ts-error{
+	display: block;
+}
+.ts-filter{
+	display: block;
+}
+.ts-filter input{
+	display: block;
+	height: 38px;
+	line-height: 38px;
+	border: 1px solid #eee;
+	padding: 0 10px;
+	width: 100%;
+}
+
+.ts-optgroup{
+	display: block;
+	padding: 4px;
+}
+.ts-optgroup + .ts-optgroup{
+	border-top: 1px solid #d2d0d0;
+}
+.ts-optgroup .ts-group-title{
+	font-size: 11px;
+	font-weight: bold;	
+}
