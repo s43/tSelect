@@ -90,15 +90,20 @@
                 }
 
                 if( opts.customScroll == true ){
-                    $('<link/>', {
-                       rel: 'stylesheet',
-                       type: 'text/css',
-                       href: 'https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css'
-                    }).appendTo('head');
-                    
-                    $.getScript( 'https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js', function(data){
+                    // check if mCustomScrollbar is already loaded or not
+                    if( $.mCustomScrollbar ){
                         optionsWrap.mCustomScrollbar();
-                    } )
+                    }else{
+                        $('<link/>', {
+                           rel: 'stylesheet',
+                           type: 'text/css',
+                           href: 'https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css'
+                        }).appendTo('head');
+                        
+                        $.getScript( 'https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js', function(data){
+                            optionsWrap.mCustomScrollbar();
+                        } )
+                    }
                 }
             }
 
