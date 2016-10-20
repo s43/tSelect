@@ -92,7 +92,7 @@
                 if( opts.customScroll == true ){
                     // check if mCustomScrollbar is already loaded or not
                     if( $.mCustomScrollbar ){
-                        optionsWrap.mCustomScrollbar();
+                        optionsWrap.find('.ts-scroll').mCustomScrollbar();
                     }else{
                         $('<link/>', {
                            rel: 'stylesheet',
@@ -101,7 +101,7 @@
                         }).appendTo('head');
                         
                         $.getScript( 'https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js', function(data){
-                            optionsWrap.mCustomScrollbar();
+                            optionsWrap.find('.ts-scroll').mCustomScrollbar();
                         } )
                     }
                 }
