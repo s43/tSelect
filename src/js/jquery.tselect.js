@@ -15,6 +15,7 @@
         var defaults = {
             placeholder: 'Select',
             filter : false,
+            customScroll : false,
             filterPlaceholder: 'Filter…',
             filterNoMatches: 'No matches…',
             dom : {
@@ -86,6 +87,18 @@
                 if( opts.filter == true ){
                     searchFilter.prependTo(optionsWrap);
                     $('<span class="ts-error">'+opts.filterNoMatches+'</span>').insertAfter(searchFilter);
+                }
+
+                if( opts.customScroll == true ){
+                    $('<link/>', {
+                       rel: 'stylesheet',
+                       type: 'text/css',
+                       href: 'https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css'
+                    }).appendTo('head');
+                    
+                    $.getScript( 'https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js', function(data){
+                        optionsWrap.mCustomScrollbar();
+                    } )
                 }
             }
 
