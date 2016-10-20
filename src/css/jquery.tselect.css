@@ -54,9 +54,11 @@
 	top: 100%;
 	left: 0; right: 0;
 	width: 100%;
-	max-height: 280px;
-	overflow: scroll;
 	z-index: 4;
+	max-height: 280px;
+}
+.ts-options-wrap .ts-scroll{
+	overflow: scroll;
 }
 .ts-options-wrap a{
 	padding: 4px 8px;
@@ -64,6 +66,10 @@
 	display: block;
 	color: #4e4e4e;
 }
+.ts-options-wrap .mCSB_inside>.mCSB_container{
+	margin-right: 10px;
+}
+
 .ts-options-wrap a:hover,.ts-options-wrap a:focus{
 	background-color: #e6e6e6;
 	text-decoration: none;

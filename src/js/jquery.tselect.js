@@ -40,7 +40,7 @@
                 wrapper        = $('<div class="' + opts.dom.wrapperClass + (select.is(':disabled') ? ' ts-disabled' : '') +'"></div>'),
                 trigger    = $('<a href="#" class="' + opts.dom.triggerClass +'">' + opts.placeholder+'</a>'),
                 searchFilter = $('<span class="ts-filter"><input type="text" placeholder="'+opts.filterPlaceholder+'" /></span>'),
-                optionsWrap = $('<div class="' + opts.dom.optionsWrapClass +'"></div>');
+                optionsWrap = $('<div class="' + opts.dom.optionsWrapClass +'"><div class="ts-scroll"></div></div>');
 
 
             // Check if the input has been already stylised, if so then move forwards.
@@ -79,7 +79,7 @@
                         if( currGroup.length < 1 ) $('<span class="ts-optgroup ts-group-'+optGroup.index()+'"><span class="ts-group-title">'+optGroup.attr('label')+'</span></span>').appendTo(optionsWrap);
                         opt.appendTo(currGroup);
                     }else{
-                        opt.appendTo(optionsWrap);
+                        opt.appendTo(optionsWrap.find('.ts-scroll'));
                     }
                     
                 });  
@@ -171,17 +171,17 @@
                 if( opts.filter == true ){
                   searchFilter.find('input').on('keyup', function(e){
                     var value = $(this).val(),
-                        filterTags = $(this).parents('.ts-filter');
+                        tsWrap = $(this).parents('.ts-wrap');
 
                     value = value.toLowerCase().replace(/\b[a-z]/g, function(letter) {
                         return letter.toUpperCase();
                     });
 
-                    matches = filterTags.siblings('a:contains(' + value + ')');
-                    nonmatches = filterTags.siblings('a:not(:contains(' + value + '))');
+                    matches = tsWrap.find('.ts-scroll a:contains(' + value + ')');
+                    nonmatches = tsWrap.find('.ts-scroll a:not(:contains(' + value + '))');
 
                     if (value == '') {
-                        filterTags.siblings('a.ts-unmatched').removeClass('ts-unmatched');
+                        tsWrap.find('.ts-scroll a.ts-unmatched').removeClass('ts-unmatched');
                     }
                     else {
                         nonmatches.addClass('ts-unmatched');
