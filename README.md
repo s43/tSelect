@@ -10,6 +10,13 @@ If anyone could add something that will get this plugin better, please Feel free
 
 jQuery : https://github.com/jquery/jquery
 
+
+##### Optional Dependencies
+
+malihu custom scrollbar plugin : https://github.com/malihu/malihu-custom-scrollbar-plugin
+
+
+
 #### Compatibility
 recent browsers such as :
 IE 8+, Safari, Firefox & Chrome.
@@ -38,13 +45,24 @@ $(document).ready(function(){
 ### Parameters
 
 **placeholder:** `default:Select`
+
 Basically it's like a placeholder, a text that shows up when there is no selected option yet (`default`). 
 
+
 **filter:** `default:false`
+
 To whether activate the Search-based filter or not
+
 
 **filterNoMatches:** `default:No matches…`
 To set a text that shows up when there's not matched results for the typed text
 
+
 **filterPlaceholder:** `default:Filter…`
+
 Filter input's placeholder
+
+
+**customScroll:** `default:false`
+
+If you needed to customize scrolling bars within your custom select, set this to `true`, 

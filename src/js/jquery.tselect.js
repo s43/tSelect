@@ -15,9 +15,9 @@
         var defaults = {
             placeholder: 'Select',
             filter : false,
-            customScroll : false,
             filterPlaceholder: 'Filter…',
             filterNoMatches: 'No matches…',
+            customScroll : false,
             dom : {
                 wrapperClass : 'ts-wrap',
                 triggerClass : 'ts-trigger',
