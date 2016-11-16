@@ -38,7 +38,7 @@
                 options = select.find('option'),
                 placeholder = ( select.attr('data-placeholder') )? select.attr('data-placeholder') : opts.placeholder,
                 wrapper        = $('<div class="' + opts.dom.wrapperClass + (select.is(':disabled') ? ' ts-disabled' : '') +'"></div>'),
-                trigger    = $('<a href="#" class="' + opts.dom.triggerClass +'">' + opts.placeholder+'</a>'),
+                trigger    = $('<a href="#" class="' + opts.dom.triggerClass +'">' + placeholder+'</a>'),
                 searchFilter = $('<span class="ts-filter"><input type="text" placeholder="'+opts.filterPlaceholder+'" /></span>'),
                 optionsWrap = $('<div class="' + opts.dom.optionsWrapClass +'"><div class="ts-scroll"></div></div>');
 
