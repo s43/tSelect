@@ -67,7 +67,7 @@
 
 
                     opt = $('<a />', {
-                        'class' : opts.dom.activeOption,
+                        'class' : $(this).attr('selected') ? opts.dom.activeOptionClass : '',
                         'href' : '#',
                         'data-val' : val,
                         'html' : html
@@ -75,7 +75,6 @@
 
                     if( $(this).attr('selected') ){
                         trigger.text( $(this).text() );
-                        $(this).addClass('active');
                     }
 
                     if( val == '' ) return;
