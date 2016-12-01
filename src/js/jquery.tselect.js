@@ -65,12 +65,18 @@
                     optGroup = $(this).parents('optgroup'),
                     html = $(this).html();
 
+
                     opt = $('<a />', {
                         'class' : opts.dom.activeOption,
                         'href' : '#',
                         'data-val' : val,
                         'html' : html
                     });
+
+                    if( $(this).attr('selected') ){
+                        trigger.text( $(this).text() );
+                        $(this).addClass('active');
+                    }
 
                     if( val == '' ) return;
 
