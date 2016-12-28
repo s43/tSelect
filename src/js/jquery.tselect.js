@@ -74,7 +74,7 @@
                     });
 
                     if( $(this).attr('selected') ){
-                        trigger.text( $(this).text() );
+                        trigger.text( $(this).text() ).attr('data-val', $(this).val());
                     }
 
                     if( val == '' ) return;
