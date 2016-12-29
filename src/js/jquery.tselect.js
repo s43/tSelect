@@ -148,15 +148,15 @@
                     _val = _self.attr('data-val');
                     e.preventDefault();
                     // take off the active class from the other options
-                    optionsWrap.find('a.active').removeClass('active');
+                    optionsWrap.find('a.ts-active').removeClass('ts-active');
                     // activate the triggered option
-                    _self.addClass('active');
+                    _self.addClass('ts-active');
                     // update select's value
                     select.val( _val ).trigger('change');
                     // take off the active state
                     _elWrap.removeClass('ts-active');
 
-                    trigger.text(_self.html());
+                    trigger.text(_self.html()).attr('data-val', _self.attr('data-val'));
 
                     optionsWrap.hide()
 
