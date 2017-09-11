@@ -42,10 +42,18 @@
                 searchFilter = $('<span class="ts-filter"><input type="text" placeholder="'+opts.filterPlaceholder+'" /></span>'),
                 optionsWrap = $('<div class="' + opts.dom.optionsWrapClass +'"><div class="ts-scroll"></div></div>');
 
+            $(this).data('ts-options', opts);
 
+            // Reload method 
+
+            $(this).init.prototype.reload = function(){
+                $(this).next('.ts-wrap').remove();
+                $(this).tSelect($(this).data('ts-options'));
+            }
             // Check if the input has been already stylised, if so then move forwards.
 
-            if( $(this).parents('.' + opts.dom.wrapperClass).length ) {
+
+            if( $(this).next('.ts-wrap').length > 0 ) {
                 return;
             }
 
