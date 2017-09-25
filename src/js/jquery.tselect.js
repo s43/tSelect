@@ -130,9 +130,6 @@
                     e.preventDefault();
 
 
-                    // Hide other selects
-                    $('.ts-options-wrap').hide();
-                    $('.ts-wrap').removeClass('ts-active');
 
                     // Show & Hide options
                     if( _elWrap.hasClass('ts-active') ){
@@ -141,6 +138,13 @@
                     }else{
                         _optionsWrap.show();
                         _elWrap.addClass('ts-active');
+
+                        // Hide other selects
+                        $('.ts-wrap').not(_elWrap).each(function(){
+                            $(this).removeClass('ts-active');
+                            $(this).find('.ts-options-wrap').hide();
+                        });
+                            
                     }
 
                     if( opts.filter == true ){
