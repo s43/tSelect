@@ -135,7 +135,7 @@
                     $('.ts-wrap').removeClass('ts-active');
 
                     // Show & Hide options
-                    if( _optionsWrap.is(':visible') ){
+                    if( _elWrap.hasClass('ts-active') ){
                         _optionsWrap.hide();
                         _elWrap.removeClass('ts-active');
                     }else{
