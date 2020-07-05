@@ -18,6 +18,7 @@
             filterPlaceholder: 'Filter…',
             filterNoMatches: 'No matches…',
             customScroll : false,
+            dataAttr: 'value',
             dom : {
                 wrapperClass : 'ts-wrap',
                 triggerClass : 'ts-trigger',
@@ -40,7 +41,8 @@
                 wrapper        = $('<div class="' + opts.dom.wrapperClass + (select.is(':disabled') ? ' ts-disabled' : '') +'"></div>'),
                 trigger    = $('<a href="#" class="' + opts.dom.triggerClass +'">' + placeholder+'</a>'),
                 searchFilter = $('<span class="ts-filter"><input type="text" placeholder="'+opts.filterPlaceholder+'" /></span>'),
-                optionsWrap = $('<div class="' + opts.dom.optionsWrapClass +'"><div class="ts-scroll"></div></div>');
+                optionsWrap = $('<div class="' + opts.dom.optionsWrapClass +'"><div class="ts-scroll"></div></div>'),
+                dataValue = (select.attr('data-val')) ? select.attr('data-val') : opts.dataAttr;
 
             $(this).data('ts-options', opts);
 
@@ -60,7 +62,7 @@
             // prepare tSelect dom elements
             var prepare = function(){
                 select.hide();
-                
+
                 wrapper.insertAfter(select);
 
                 trigger.appendTo(wrapper);
@@ -69,7 +71,7 @@
 
                 // append select options as a tags
                 options.each(function(){
-                    val = $(this).val(),
+                    val = $(this).attr(dataValue),
                     optGroup = $(this).parents('optgroup'),
                     html = $(this).html();
 
@@ -94,9 +96,9 @@
                     }else{
                         opt.appendTo(optionsWrap.find('.ts-scroll'));
                     }
-                    
-                });  
-                
+
+                });
+
                 if( opts.filter == true ){
                     searchFilter.prependTo(optionsWrap);
                     $('<span class="ts-error">'+opts.filterNoMatches+'</span>').insertAfter(searchFilter);
@@ -112,7 +114,7 @@
                            type: 'text/css',
                            href: 'https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css'
                         }).appendTo('head');
-                        
+
                         $.getScript( 'https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js', function(data){
                             optionsWrap.find('.ts-scroll').mCustomScrollbar();
                         } )
@@ -144,13 +146,13 @@
                             $(this).removeClass('ts-active');
                             $(this).find('.ts-options-wrap').hide();
                         });
-                            
+
                     }
 
                     if( opts.filter == true ){
                         searchFilter.find('input').trigger('focus');
                     }
-                    
+
                     opts.onActive();
                 })
 
@@ -209,7 +211,7 @@
                           matches.removeClass('ts-unmatched');
                         }
                     }
-                  })                    
+                  })
                 }
             }
             prepare();
