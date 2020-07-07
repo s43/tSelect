@@ -388,6 +388,16 @@
 				</select>							
 			</div>
 			<!-- #select-3 -->
+			<div id="select-4" style="display: none;">
+				<h3>Custom Select value based on specific attribute</h3>
+				<select class="js-source-states">
+					<option id="0" value="c">Cyan</option>
+					<option id="1" value="m">Magenta</option>
+					<option id="2" value="y">Yellow</option>
+					<option id="3" value="k">Black</option>
+				</select>
+			</div>
+			<!-- #select-4 -->
 		</section>
 		<!-- ./wrapper -->
 		<!--#include virtual="templates/footer.html" --> 
@@ -413,8 +423,16 @@
 				});
 
 				$('#select-3 select').tSelect({
-					placeholder : 'Select your zone'
-				})
+					placeholder : 'Select your zone',
+					onOptionSelect : function(){
+						$('#select-4').show();
+					}
+				});
+
+				$('#select-4 select').tSelect({
+					placeholder : 'Select a color',
+					dataAttr : 'id'
+				});
 			})
 		</script>
 		<!-- ./scripts -->

@@ -66,3 +66,7 @@ Filter input's placeholder
 **customScroll:** `default:false`
 
 If you needed to customize scrolling bars within your custom select, set this to `true`, 
+
+**dataAttr:** `default:value`
+
+Set data source attribute
